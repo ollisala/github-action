@@ -23,7 +23,7 @@ jobs:
       with:
         args: install
     - name: serverless deploy
-      uses: serverless/github-action@master
+      uses: ollisala/github-action@master
       with:
         args: deploy
       env:
@@ -31,6 +31,8 @@ jobs:
         # or if using AWS creds directly
         # AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         # AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        # If your serverless.yaml is not at the root directory, please add
+        # PROJECT_DIR: <directory goes here>
 ```
 
 ## License
