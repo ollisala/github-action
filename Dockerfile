@@ -16,5 +16,6 @@ RUN \
   rm -rf /var/lib/apt/lists/*
 
 RUN npm i -g serverless@1.72.0
+RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT ["serverless"]
+ENTRYPOINT ["/entrypoint.sh"]
